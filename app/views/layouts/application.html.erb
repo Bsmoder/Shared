@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%=yield(:title) %>
+  </title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header><div id="Topmenu">
+<%= link_to 'Home', {:controller => 'pages', :action => 'home'} %>
+<%= link_to 'Join the listing', {:controller => 'professionals', :action => 'new'}	%>
+<%= link_to 'Messages', {:controller => 'messages', :action => 'index'}	%>
+<%= link_to 'Profile', {:controller => 'users', :action => 'index'} %>
+<%= link_to 'Help', {:controller => 'pages', :action => 'help'} %>
+
+</div>
+</header>
+<p></p>
+<main id="content">
+<%= yield %>
+</main>
+
+</body>
+</html>

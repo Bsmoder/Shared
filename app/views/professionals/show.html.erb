@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @professional.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @professional.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @professional.email %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @professional.phonenumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @professional.description %>
+</p>
+
+<%= link_to 'Edit', edit_professional_path(@professional) %> |
+<%= link_to 'Back', professionals_path %>
